@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 
 
 def lambda_handler(event, context):
-    # print()
+    print()
     today = None
     test = False
     if test:
