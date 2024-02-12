@@ -1,0 +1,16 @@
+../../bin/mecab-py,sha256=ZiuKEFU22eqjDYGQTnBPc-xXqfq0Sz-eaHufy_A0u-Q,217
+../../bin/mecab-py-info,sha256=14CPEyr1Bd5Oqhrmz1iRYda8mLiyXJxSDX82F_j-014,215
+MeCab/_MeCab.cpython-38-x86_64-linux-gnu.so,sha256=QQ9KWSmbTEJAM6_OJaiLGN6ZYbK04QrP-mCqLStpPPY,16692528
+MeCab/__init__.py,sha256=-3agARS_4z3uPcvqfQwvGAtg8N5IhNG_hkey11_D8VA,4405
+MeCab/__pycache__/__init__.cpython-38.pyc,,
+MeCab/__pycache__/cli.cpython-38.pyc,,
+MeCab/cli.py,sha256=6V7j6EPaCxI5rzwdvLeZjTyIeWdPORvAifuosJpi3DY,991
+mecab_python3-1.0.2.dist-info/AUTHORS,sha256=iILKKikEFVrLH3S2bl4m1fCNQ8NM4GMRsz8hppNzEJs,144
+mecab_python3-1.0.2.dist-info/COPYING,sha256=ntigF_Iia28Nbdah0lQEgAN0oSxw4UpWypYTF294d44,240
+mecab_python3-1.0.2.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+mecab_python3-1.0.2.dist-info/METADATA,sha256=FyxRaBZoVJH9WeM0QfIam6wBJcyX4nJTJ9NvOll7TkI,4994
+mecab_python3-1.0.2.dist-info/RECORD,,
+mecab_python3-1.0.2.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mecab_python3-1.0.2.dist-info/WHEEL,sha256=3Rn77v1cOIQWUJHbJxwJJ4HycjuBQ6DIO-hbFDX-kLU,111
+mecab_python3-1.0.2.dist-info/entry_points.txt,sha256=QK-YZRJo08K_GIPvJZlV_2OTA1nwl2GCa7Kz_xD-X_U,77
+mecab_python3-1.0.2.dist-info/top_level.txt,sha256=IVvVKeTLHhM6T9k5l1p9R6q6g9YlzVjjNn1IWwjM5Es,6

@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda Function
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: test_function
+      Role: arn:aws:iam::527973456287:role/service-role/python_test-role-7r61vc0f
+      Runtime: python3.9
+      Handler: lambda_function.lambda_handler
+      CodeUri: ./
