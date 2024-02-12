@@ -23,7 +23,8 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          git diff --dirstat=files,0 ${{ github.event.before }} ${{ github.event.after }}
+          diff_files=$(git diff --dirstat=files,0 ${{ github.event.before }} ${{ github.event.after }} | cut -d '%' -f 2)
+          echo "# diff_files: ${diff_files}"
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ap-northeast-1
