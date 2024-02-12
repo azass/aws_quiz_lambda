@@ -19,13 +19,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch base branch
-        run: git fetch origin ${base_branch}
-
       - name: Deploy to S3
         run: |
-          diff_files=$(git diff --name-only HEAD ${base_branch} -- "${diff_path}" | tr "\n" " ")
-          echo "# diff_files: ${diff_files}"
+          git diff --dirstat=files,0 HEAD^...HEAD
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ap-northeast-1
