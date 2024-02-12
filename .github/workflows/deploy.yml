@@ -25,11 +25,13 @@ jobs:
         run: |
           ls
           diff_files=$(git diff --dirstat=files,0 ${{ github.event.before }} ${{ github.event.after }} | cut -d '%' -f 2)
-          cd python_test
-          ls
-          zip src buildspec.yml lambda_function.py template.yml
-          ls
           echo "# diff_files: ${diff_files}"
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws configure set default.region ap-northeast-1
+          cd ${diff_files}
+          ls
+          if [ -e buildspec.yml ]; then
+            zip src buildspec.yml lambda_function.py template.yml
+            ls
+            aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws configure set default.region ap-northeast-1
+          fi
