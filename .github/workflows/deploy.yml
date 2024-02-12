@@ -17,7 +17,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          git diff --dirstat=files,0 HEAD@{1} HEAD | cut -d '%' -f 2 
+          git diff --dirstat=files,0 HEAD@{1} HEAD@{0} | cut -d '%' -f 2 
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ap-northeast-1
