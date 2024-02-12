@@ -27,7 +27,7 @@ jobs:
           diff_files=$(git diff --dirstat=files,0 ${{ github.event.before }} ${{ github.event.after }} | cut -d '%' -f 2)
           cd python_test
           ls
-          zip src .
+          zip src buildspec.yml lambda_function.py template.yml
           ls
           echo "# diff_files: ${diff_files}"
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
